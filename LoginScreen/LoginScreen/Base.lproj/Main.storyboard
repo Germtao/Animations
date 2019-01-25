@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_sunny" translatesAutoresizingMaskIntoConstraints="NO" id="TLH-DU-pD8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sOo-nK-GZA">
+                                <rect key="frame" x="47" y="223" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jS0-Eg-hwF">
+                                <rect key="frame" x="47" y="270" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_sunny_cloud_4" translatesAutoresizingMaskIntoConstraints="NO" id="tND-Gd-WHy">
+                                <rect key="frame" x="16" y="388" width="115" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_sunny_cloud_3" translatesAutoresizingMaskIntoConstraints="NO" id="9DE-cm-Jhq">
+                                <rect key="frame" x="269" y="371" width="74" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_sunny_cloud_2" translatesAutoresizingMaskIntoConstraints="NO" id="elf-RS-wcS">
+                                <rect key="frame" x="237" y="126" width="138" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_sunny_cloud_1" translatesAutoresizingMaskIntoConstraints="NO" id="zoJ-R2-jRZ">
+                                <rect key="frame" x="-103" y="103" width="159" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPc-ZC-77c">
+                                <rect key="frame" x="112" y="346" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.63137254901960782" green="0.83921568627450982" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="登录">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xz6-sD-oya"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TLH-DU-pD8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CtN-vo-B4I"/>
+                            <constraint firstAttribute="bottom" secondItem="TLH-DU-pD8" secondAttribute="bottom" id="E0Q-Q1-cy2"/>
+                            <constraint firstAttribute="trailing" secondItem="TLH-DU-pD8" secondAttribute="trailing" id="ZP0-Gq-XZu"/>
+                            <constraint firstItem="TLH-DU-pD8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yqc-hE-Dgs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cloudView1" destination="zoJ-R2-jRZ" id="0ti-Mz-ceS"/>
+                        <outlet property="cloudView2" destination="elf-RS-wcS" id="gLe-hG-jgI"/>
+                        <outlet property="cloudView3" destination="9DE-cm-Jhq" id="fpg-y9-HeG"/>
+                        <outlet property="cloudView4" destination="tND-Gd-WHy" id="GSG-Sg-d26"/>
+                        <outlet property="loginBtn" destination="kPc-ZC-77c" id="gW2-lO-cSE"/>
+                        <outlet property="passwordTF" destination="jS0-Eg-hwF" id="HwC-xt-wny"/>
+                        <outlet property="usernameTF" destination="sOo-nK-GZA" id="4ta-1T-nd9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="24"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_sunny" width="320" height="568"/>
+        <image name="bg_sunny_cloud_1" width="159" height="50"/>
+        <image name="bg_sunny_cloud_2" width="138" height="49"/>
+        <image name="bg_sunny_cloud_3" width="74" height="35"/>
+        <image name="bg_sunny_cloud_4" width="115" height="50"/>
+    </resources>
+</document>
