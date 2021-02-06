@@ -13,6 +13,7 @@
 		3B2117C225CE91BD00E685A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2117C025CE91BD00E685A3 /* Main.storyboard */; };
 		3B2117C425CE91C400E685A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2117C325CE91C400E685A3 /* Assets.xcassets */; };
 		3B2117C725CE91C400E685A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2117C525CE91C400E685A3 /* LaunchScreen.storyboard */; };
+		3B2117D225CE9A8600E685A3 /* PropertyAnimatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2117D125CE9A8600E685A3 /* PropertyAnimatorState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		3B2117C625CE91C400E685A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B2117C825CE91C400E685A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B2117CF25CE97BD00E685A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3B2117D125CE9A8600E685A3 /* PropertyAnimatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyAnimatorState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		3B2117B925CE91BC00E685A3 /* UIViewPropertyAnimator-demo */ = {
 			isa = PBXGroup;
 			children = (
+				3B2117D025CE9A5A00E685A3 /* PropertyAnimator */,
 				3B2117BA25CE91BC00E685A3 /* AppDelegate.swift */,
 				3B2117BC25CE91BC00E685A3 /* SceneDelegate.swift */,
 				3B2117BE25CE91BC00E685A3 /* ViewController.swift */,
@@ -67,6 +70,14 @@
 				3B2117C825CE91C400E685A3 /* Info.plist */,
 			);
 			path = "UIViewPropertyAnimator-demo";
+			sourceTree = "<group>";
+		};
+		3B2117D025CE9A5A00E685A3 /* PropertyAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				3B2117D125CE9A8600E685A3 /* PropertyAnimatorState.swift */,
+			);
+			path = PropertyAnimator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 				3B2117BF25CE91BD00E685A3 /* ViewController.swift in Sources */,
 				3B2117BB25CE91BC00E685A3 /* AppDelegate.swift in Sources */,
 				3B2117BD25CE91BC00E685A3 /* SceneDelegate.swift in Sources */,
+				3B2117D225CE9A8600E685A3 /* PropertyAnimatorState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

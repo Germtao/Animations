@@ -55,3 +55,95 @@ class ViewController: UIViewController {
 
 如果我们尝试使用标准的`UIView`动画来执行此操作，则将需要比上例中列出的逻辑更多的逻辑。`UIView`动画无法提供直接控制动画完成百分比的简便方法，也无法让我们轻松地暂停并继续动画直到完成。
 
+
+# 让我们建立一个弹出菜单！
+
+我们将分十步构建一个完全交互式，可中断，可擦除和可逆的弹出菜单。
+
+
+### 1、点击以打开和关闭。
+
+首先，让我们的弹出视图在打开状态和关闭状态之间进行动画处理。这里没有花哨的技巧，只是我们先前学习的`UIViewPropertyAnimator`的基础。
+
+`PropertyAnimatorState.swift`：
+
+```
+enum PropertyAnimatorState {
+    case closed
+    case open
+}
+
+extension PropertyAnimatorState {
+    var opposite: PropertyAnimatorState {
+        switch self {
+        case .closed: return .open
+        case .open:   return .closed
+        }
+    }
+}
+```
+
+`ViewController.swift`：
+
+```
+private lazy var popupView: UIView = {
+    let view = UIView()
+    view.backgroundColor = .blue
+    return view
+}()
+
+private lazy var tapGesture = UITapGestureRecognizer(target: self, action: #selector(popupViewTapped(_:)))
+
+private var bottomConstraint = NSLayoutConstraint()
+
+private var currentState: PropertyAnimatorState = .closed
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    layout()
+    popupView.addGestureRecognizer(tapGesture)
+}
+
+private func layout() {
+    popupView.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(popupView)
+    
+    popupView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    popupView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    popupView.heightAnchor.constraint(equalToConstant: 500).isActive = true
+    bottomConstraint = popupView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 440)
+    bottomConstraint.isActive = true
+}
+
+@objc private func popupViewTapped(_ gesture: UITapGestureRecognizer) {
+    let state = currentState.opposite
+    let transitionAnimator = UIViewPropertyAnimator(duration: 1, dampingRatio: 1) {
+        switch state {
+        case .open:
+            self.bottomConstraint.constant = 0
+        case .closed:
+            self.bottomConstraint.constant = 440
+        }
+        self.view.layoutIfNeeded()
+    }
+    transitionAnimator.addCompletion { position in
+        switch position {
+        case .start:
+            self.currentState = state.opposite
+        case .end:
+            self.currentState = state
+        default:
+            break
+        }
+        
+        switch self.currentState {
+        case .open:
+            self.bottomConstraint.constant = 0
+        case .closed:
+            self.bottomConstraint.constant = 440
+        }
+    }
+    transitionAnimator.startAnimation()
+}
+```
