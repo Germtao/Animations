@@ -1,6 +1,6 @@
 #  交互动画 UIViewPropertyAnimator
 
-![UIViewPropertyAnimator的状态图]()
+![UIViewPropertyAnimator的状态图](https://github.com/Germtao/Animations/blob/master/UIViewPropertyAnimator-demo/State%20diagram%20for%20UIViewPropertyAnimator.png)
 
 一个`Animator`可以处于三种可能的状态：
 
