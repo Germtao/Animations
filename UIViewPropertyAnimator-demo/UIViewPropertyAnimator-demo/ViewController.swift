@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     private var runningAnimator = UIViewPropertyAnimator()
     
     /// 每个动画器的进度。这个数组与`runningAnimators`数组平行
-//    private var animationProgress: CGFloat = 0
+    private var animationProgress: CGFloat = 0
     
     // MARK: - Views
     
@@ -94,7 +94,7 @@ extension ViewController {
             
             // 跟踪每个动画器的进度
 //            animationProgress = runningAnimators.map { $0.fractionComplete }
-//            animationProgress = runningAnimator.fractionComplete
+            animationProgress = runningAnimator.fractionComplete
             
         case .changed:
             
@@ -109,7 +109,7 @@ extension ViewController {
 //            for (index, animator) in runningAnimators.enumerated() {
 //                animator.fractionComplete = fraction + animationProgress[index]
 //            }
-            animator.fractionComplete = fraction
+            runningAnimator.fractionComplete = fraction + animationProgress
             
         case .ended:
             

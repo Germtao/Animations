@@ -187,3 +187,24 @@ private func layout() {
 ```
 
 该代码与前面的示例非常相似，不同之处在于可以中断动画。我们已经将动画代码重构为一个名为`animateTransitionIfNeeded`的函数，该函数运行先前在`popupViewTapped`函数内部的所有代码。
+
+### 3、记录动画进度以修复中断偏移
+
+> 一个问题：当动画被中断时，它会偏离用户的触摸。
+
+这是由于平移处理程序未考虑动画的当前进度。要解决此问题，我们需要记录动画器的`fractionComplete`，并在计算平移偏移时将其用作基线。
+
+我们将需要一个属性来存储动画的当前进度：
+
+> private var animationProgress: CGFloat = 0
+
+当平移手势处于开始状态时，我们记录动画的当前进度：
+
+> animationProgress = runningAnimator.fractionComplete
+
+在平移手势的`.changed`状态下，我们将动画进度添加到计算出的`fraction`中：
+
+> runningAnimator.fractionComplete = fraction + animationProgress
+
+现在，平移手势可以按预期工作，并且可以更自然地跟踪用户的手指。
+
