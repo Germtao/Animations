@@ -293,3 +293,19 @@ runningAnimator.fractionComplete = fraction + animationProgress
 ```
 
 现在我们的动画可以反转了！如果用户想关闭弹出式动画，可以轻松直观地进行操作。
+
+### 6、设置拐角半径的动画
+
+在`iOS 11`中，可以设置`CALayer`的角半径，而无需`CABasicAnimation`。这意味着我们可以在动画块中更新视图的拐角半径，这样就可以了！
+
+```
+self.popupView.layer.cornerRadius = 20
+```
+
+我们还可以指定圆角。在这种情况下，我们只希望对左上角和右上角进行圆角处理。
+
+```
+view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+```
+
+现在，顶部的两个角与我们的原始动画一起被动画化。

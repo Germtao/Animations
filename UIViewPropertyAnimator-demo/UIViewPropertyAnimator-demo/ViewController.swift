@@ -37,6 +37,10 @@ class ViewController: UIViewController {
     private lazy var popupView: UIView = {
         let view = UIView()
         view.backgroundColor = .blue
+        view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.1
+        view.layer.shadowRadius = 10
         return view
     }()
     
@@ -170,11 +174,11 @@ extension ViewController {
             case .open:
                 self.bottomConstraint.constant = 0
                 self.popupView.layer.cornerRadius = 20
-                self.overlayView.alpha = 0.5
+//                self.overlayView.alpha = 0.5
             case .closed:
                 self.bottomConstraint.constant = self.popupOffset
                 self.popupView.layer.cornerRadius = 0
-                self.overlayView.alpha = 0
+//                self.overlayView.alpha = 0
             }
             self.view.layoutIfNeeded()
         }
