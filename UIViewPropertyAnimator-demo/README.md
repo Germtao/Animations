@@ -309,3 +309,7 @@ view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
 ```
 
 现在，顶部的两个角与我们的原始动画一起被动画化。
+
+### 7、让它更漂亮！
+
+我们的蓝色弹出视图效果很好，但可以进行一些视觉上的改进。让我们添加背景图片、叠加视图、标题标签、细微阴影和一些示例评论。
