@@ -40,8 +40,7 @@ class ViewController: UIViewController {
         return view
     }()
     
-    private lazy var tapGesture = UITapGestureRecognizer(target: self, action: #selector(popupViewTapped(_:)))
-    private lazy var panGesture = UIPanGestureRecognizer(target: self, action: #selector(popupViewPanned(_:)))
+    private lazy var panGesture = InstantPanGestureRecognizer(target: self, action: #selector(popupViewPanned(_:)))
     
     // MARK: - View Controller Lifecycle
     
@@ -49,7 +48,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         layout()
-        popupView.addGestureRecognizer(tapGesture)
         popupView.addGestureRecognizer(panGesture)
     }
     
@@ -77,10 +75,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController {
-    
-    @objc private func popupViewTapped(_ gesture: UITapGestureRecognizer) {
-        animateTransitionIfNeeded(to: currentState.opposite, duration: 1.5)
-    }
     
     @objc private func popupViewPanned(_ gesture: UIPanGestureRecognizer) {
         switch gesture.state {

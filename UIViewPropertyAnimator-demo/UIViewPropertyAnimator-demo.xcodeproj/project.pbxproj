@@ -14,6 +14,7 @@
 		3B2117C425CE91C400E685A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2117C325CE91C400E685A3 /* Assets.xcassets */; };
 		3B2117C725CE91C400E685A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2117C525CE91C400E685A3 /* LaunchScreen.storyboard */; };
 		3B2117D225CE9A8600E685A3 /* PropertyAnimatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2117D125CE9A8600E685A3 /* PropertyAnimatorState.swift */; };
+		3BFECF3925DF9BAE00714842 /* InstantPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFECF3825DF9BAE00714842 /* InstantPanGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		3B2117C825CE91C400E685A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B2117CF25CE97BD00E685A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3B2117D125CE9A8600E685A3 /* PropertyAnimatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyAnimatorState.swift; sourceTree = "<group>"; };
+		3BFECF3825DF9BAE00714842 /* InstantPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantPanGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				3B2117D125CE9A8600E685A3 /* PropertyAnimatorState.swift */,
+				3BFECF3825DF9BAE00714842 /* InstantPanGestureRecognizer.swift */,
 			);
 			path = PropertyAnimator;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				3B2117BB25CE91BC00E685A3 /* AppDelegate.swift in Sources */,
 				3B2117BD25CE91BC00E685A3 /* SceneDelegate.swift in Sources */,
 				3B2117D225CE9A8600E685A3 /* PropertyAnimatorState.swift in Sources */,
+				3BFECF3925DF9BAE00714842 /* InstantPanGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

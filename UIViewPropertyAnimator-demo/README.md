@@ -208,3 +208,22 @@ private func layout() {
 
 现在，平移手势可以按预期工作，并且可以更自然地跟踪用户的手指。
 
+### 4、引入自定义即时平移手势
+
+中断行为有效，但很尴尬。为了识别平移手势，用户必须在屏幕上点击，然后向任何方向移动手指。我们希望这种行为像滚动视图一样，它允许用户仅需按下即可“捕获”视图。当前，仅在触摸和移动触摸时才触发轻击手势和平移手势。为了触发触地事件，我们可以创建自己的自定义手势识别器。
+
+```
+class InstantPanGestureRecognizer: UIPanGestureRecognizer {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
+        if self.state == .began { return }
+        super.touchesBegan(touches, with: event)
+        self.state = .began
+    }
+}
+```
+
+该平移手势子类在触地时进入开始状态。它允许我们替换以前的两个手势识别器。现在，**点击**是一个**即时平移**，在开始后立即结束。通过使用此自定义手势识别器，我们可以改善以前的**点击/平移**解决方案的行为，并简化逻辑。
+
+注意：为了对`UIGestureRecognizer`进行子类化，您需要在文件顶部包括此导入：
+
+> import UIKit.UIGestureRecognizerSubclass
