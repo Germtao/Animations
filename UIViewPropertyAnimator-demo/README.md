@@ -153,3 +153,37 @@ private func layout() {
 我们引入一个`State`枚举来指示弹出窗口是打开的还是关闭的。它还具有计算的相反属性，该属性返回与当前状态相反的状态。我们本来可以用布尔标志来实现，但这更容易推论，尤其是当我们的动画代码变得更加复杂时。
 
 需要指出的一件事-当动画完成时，我们正在手动更新约束的值。这应该由动画器自动处理，但是显式设置它们可以修复一些边缘错误。
+
+### 2、添加 UIPanGestureRecognizer
+
+为了使动画具有交互性，我们将引入第二个手势识别器，即`UIPanGestureRecognizer`。这将允许用户通过在弹出视图上滑动来开始和中断动画。这将允许用户通过在弹出视图上滑动来开始和中断动画。
+
+```
+@objc private func popupViewPanned(_ gesture: UIPanGestureRecognizer) {
+    switch gesture.state {
+    case .began:
+        // 开始动画
+        animateTransitionIfNeeded(to: currentState.opposite, duration: 1.5)
+        
+        // 暂停所有动画，因为下一个事件可能是平移
+        runningAnimator.pauseAnimation()
+        
+    case .changed:
+        // 变量设置
+        let transition = gesture.translation(in: popupView)
+        var fraction = -transition.y / popupOffset
+        
+        // 调整当前状态和反转状态的分数
+        if currentState == .open { fraction *= -1 }
+        animator.fractionComplete = fraction
+        
+    case .ended:
+        runningAnimator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
+        
+    default:
+        break
+    }
+}
+```
+
+该代码与前面的示例非常相似，不同之处在于可以中断动画。我们已经将动画代码重构为一个名为`animateTransitionIfNeeded`的函数，该函数运行先前在`popupViewTapped`函数内部的所有代码。
