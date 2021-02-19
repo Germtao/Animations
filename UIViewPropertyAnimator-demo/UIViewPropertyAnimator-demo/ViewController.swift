@@ -96,9 +96,10 @@ extension ViewController {
             let transition = gesture.translation(in: popupView)
             var fraction = -transition.y / popupOffset
             
-            // 调整当前状态和反转状态的分数
+            // 调整当前状态和反转状态的 fraction
             if currentState == .open { fraction *= -1 }
 //            if runningAnimators[0].isReversed { fraction *= -1 }
+            if runningAnimator.isReversed { fraction *= -1 }
             
 //            for (index, animator) in runningAnimators.enumerated() {
 //                animator.fractionComplete = fraction + animationProgress[index]
@@ -107,32 +108,45 @@ extension ViewController {
             
         case .ended:
             
-//            let yVelocity = gesture.velocity(in: popupView).y
-//            let shouldClose = yVelocity > 0
+            let yVelocity = gesture.velocity(in: popupView).y
+            let shouldClose = yVelocity > 0
             
             // 如果没有动作，请继续所有动画并尽早退出
-//            if yVelocity == 0 {
+            if yVelocity == 0 {
 //                runningAnimators.forEach { $0.continueAnimation(withTimingParameters: nil, durationFactor: 0) }
-//                break
-//            }
+                runningAnimator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
+                break
+            }
             
             // 根据动画的当前状态和平移动画来反转动画
-//            switch currentState {
-//            case .open:
+            switch currentState {
+            case .open:
 //                if !shouldClose && !runningAnimators[0].isReversed {
 //                    runningAnimators.forEach { $0.isReversed = !$0.isReversed }
 //                }
 //                if shouldClose && runningAnimators[0].isReversed {
 //                    runningAnimators.forEach { $0.isReversed = !$0.isReversed }
 //                }
-//            case .closed:
+                if !shouldClose && !runningAnimator.isReversed {
+                    runningAnimator.isReversed = !runningAnimator.isReversed
+                }
+                if shouldClose && runningAnimator.isReversed {
+                    runningAnimator.isReversed = !runningAnimator.isReversed
+                }
+            case .closed:
 //                if shouldClose && !runningAnimators[0].isReversed {
 //                    runningAnimators.forEach { $0.isReversed = !$0.isReversed }
 //                }
 //                if !shouldClose && runningAnimators[0].isReversed {
 //                    runningAnimators.forEach { $0.isReversed = !$0.isReversed }
 //                }
-//            }
+                if shouldClose && !runningAnimator.isReversed {
+                    runningAnimator.isReversed = !runningAnimator.isReversed
+                }
+                if !shouldClose && runningAnimator.isReversed {
+                    runningAnimator.isReversed = !runningAnimator.isReversed
+                }
+            }
             
             // 继续所有动画
 //            runningAnimators.forEach { $0.continueAnimation(withTimingParameters: nil, durationFactor: 0) }

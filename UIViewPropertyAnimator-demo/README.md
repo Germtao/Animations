@@ -196,15 +196,21 @@ private func layout() {
 
 我们将需要一个属性来存储动画的当前进度：
 
-> private var animationProgress: CGFloat = 0
+```
+private var animationProgress: CGFloat = 0
+```
 
 当平移手势处于开始状态时，我们记录动画的当前进度：
 
-> animationProgress = runningAnimator.fractionComplete
+```
+animationProgress = runningAnimator.fractionComplete
+```
 
 在平移手势的`.changed`状态下，我们将动画进度添加到计算出的`fraction`中：
 
-> runningAnimator.fractionComplete = fraction + animationProgress
+```
+runningAnimator.fractionComplete = fraction + animationProgress
+```
 
 现在，平移手势可以按预期工作，并且可以更自然地跟踪用户的手指。
 
@@ -226,4 +232,64 @@ class InstantPanGestureRecognizer: UIPanGestureRecognizer {
 
 注意：为了对`UIGestureRecognizer`进行子类化，您需要在文件顶部包括此导入：
 
-> import UIKit.UIGestureRecognizerSubclass
+```
+import UIKit.UIGestureRecognizerSubclass
+```
+
+### 5、使用平移速度反转动画
+
+> 剩下的一个问题是：弹出窗口不考虑以哪种方式“抛出”视图。
+
+如果我们点击关闭的弹出窗口，在动画中期捕获它，然后向下滑动，它将继续对打开的动画进行动画处理。为了解决这个问题，我们可以有条件地反转动画器。这将基于以下几个因素：
+
+- 弹出窗口的当前状态
+- 动画器当前是否反转
+- 平移手势的速度
+
+现在，平移手势处理程序的`.ended`情况如下所示：
+
+```
+let yVelocity = gesture.velocity(in: popupView).y
+let shouldClose = yVelocity > 0
+
+// 如果没有动作，请继续所有动画并尽早退出
+if yVelocity == 0 {
+    runningAnimator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
+    break
+}
+
+// 根据动画的当前状态和平移动画来反转动画
+switch currentState {
+case .open:
+    if !shouldClose && !runningAnimator.isReversed {
+        runningAnimator.isReversed = !runningAnimator.isReversed
+    }
+    if shouldClose && runningAnimator.isReversed {
+        runningAnimator.isReversed = !runningAnimator.isReversed
+    }
+case .closed:
+    if shouldClose && !runningAnimator.isReversed {
+        runningAnimator.isReversed = !runningAnimator.isReversed
+    }
+    if !shouldClose && runningAnimator.isReversed {
+        runningAnimator.isReversed = !runningAnimator.isReversed
+    }
+}
+
+// 继续所有动画并尽早退出
+runningAnimator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
+```
+
+这种逻辑乍一看似乎很复杂，但是可以通过考虑所有可能的情况来得出。在平移手势处理程序`.changed`的情况下，我们需要尊重动画设计器的`isReversed`属性：
+
+```
+let transition = gesture.translation(in: popupView)
+var fraction = -transition.y / popupOffset
+
+// 调整当前状态和反转状态的 fraction
+if currentState == .open { fraction *= -1 }
+if runningAnimator.isReversed { fraction *= -1 }
+runningAnimator.fractionComplete = fraction + animationProgress
+```
+
+现在我们的动画可以反转了！如果用户想关闭弹出式动画，可以轻松直观地进行操作。
