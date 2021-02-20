@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingDots" customModule="LoadingDotsAnimation" customModuleProvider="target">
+            <connections>
+                <outlet property="dotOne" destination="Dcs-js-Q9v" id="pve-wI-Xzq"/>
+                <outlet property="dotThree" destination="P6h-FN-aC1" id="p2r-cs-GHh"/>
+                <outlet property="dotTwo" destination="CPE-4r-Arz" id="f9i-jl-sgz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="166" height="110"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="6cD-dM-mtS">
+                    <rect key="frame" x="20" y="20" width="126" height="70"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxb-9V-nTz">
+                            <rect key="frame" x="0.0" y="0.0" width="126" height="34"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="zy7-ef-Zh3">
+                                    <rect key="frame" x="0.0" y="0.0" width="126" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="126" id="7Lf-JW-L6n"/>
+                                        <constraint firstAttribute="height" constant="34" id="XZU-Rs-DBI"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="usc-bv-1KP">
+                            <rect key="frame" x="42" y="60" width="42" height="10"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="Dcs-js-Q9v">
+                                    <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="Xxq-Sl-Nzf"/>
+                                        <constraint firstAttribute="width" constant="10" id="vlJ-E4-nhD"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="P6h-FN-aC1">
+                                    <rect key="frame" x="16" y="0.0" width="10" height="10"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="jWl-Nw-t22"/>
+                                        <constraint firstAttribute="height" constant="10" id="xdO-6S-tuO"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="CPE-4r-Arz">
+                                    <rect key="frame" x="32" y="0.0" width="10" height="10"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="EOJ-LU-YNr"/>
+                                        <constraint firstAttribute="width" constant="10" id="iCc-Nq-wrt"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6cD-dM-mtS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="IcC-u0-LEq"/>
+                <constraint firstItem="6cD-dM-mtS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Wvo-Us-de9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dot" width="54" height="54"/>
+        <image name="logo" width="402" height="112"/>
+    </resources>
+</document>
