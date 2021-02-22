@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GradientAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="TW4-bY-9jy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRU-ST-Zks" customClass="LoadingLabel" customModule="GradientAnimation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="401" width="414" height="94"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="oAc-pJ-TdT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Paper"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MRU-ST-Zks" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NgY-Y9-8pP"/>
+                            <constraint firstAttribute="bottom" secondItem="TW4-bY-9jy" secondAttribute="bottom" id="asb-Kv-TPy"/>
+                            <constraint firstItem="TW4-bY-9jy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bjH-5V-g3q"/>
+                            <constraint firstAttribute="trailing" secondItem="MRU-ST-Zks" secondAttribute="trailing" id="cFZ-jv-Ocw"/>
+                            <constraint firstItem="TW4-bY-9jy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fft-Qy-M8i"/>
+                            <constraint firstItem="MRU-ST-Zks" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i9o-RG-og9"/>
+                            <constraint firstItem="MRU-ST-Zks" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n1F-Oo-24M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TW4-bY-9jy" secondAttribute="trailing" id="pPp-ug-wdY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1200" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
