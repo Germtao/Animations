@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7194511E25E3D2C000C1D34C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7194511D25E3D2C000C1D34C /* AppDelegate.swift */; };
+		7194512025E3D2C000C1D34C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7194511F25E3D2C000C1D34C /* SceneDelegate.swift */; };
+		7194512225E3D2C000C1D34C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7194512125E3D2C000C1D34C /* ViewController.swift */; };
+		7194512525E3D2C000C1D34C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7194512325E3D2C000C1D34C /* Main.storyboard */; };
+		7194512725E3D2C200C1D34C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7194512625E3D2C200C1D34C /* Assets.xcassets */; };
+		7194512A25E3D2C200C1D34C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7194512825E3D2C200C1D34C /* LaunchScreen.storyboard */; };
+		7194513325E3D34E00C1D34C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7194513225E3D34E00C1D34C /* Quote.swift */; };
+		7194513625E3D39200C1D34C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7194513525E3D39200C1D34C /* Extensions.swift */; };
+		7194513925E3D44F00C1D34C /* TTLayerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7194513825E3D44F00C1D34C /* TTLayerAnimation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7194511A25E3D2C000C1D34C /* SecretTextAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretTextAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7194511D25E3D2C000C1D34C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7194511F25E3D2C000C1D34C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7194512125E3D2C000C1D34C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7194512425E3D2C000C1D34C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7194512625E3D2C200C1D34C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7194512925E3D2C200C1D34C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7194512B25E3D2C200C1D34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7194513225E3D34E00C1D34C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		7194513525E3D39200C1D34C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7194513825E3D44F00C1D34C /* TTLayerAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLayerAnimation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7194511725E3D2C000C1D34C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7194511125E3D2BF00C1D34C = {
+			isa = PBXGroup;
+			children = (
+				7194511C25E3D2C000C1D34C /* SecretTextAnimation */,
+				7194511B25E3D2C000C1D34C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7194511B25E3D2C000C1D34C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7194511A25E3D2C000C1D34C /* SecretTextAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7194511C25E3D2C000C1D34C /* SecretTextAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				7194511D25E3D2C000C1D34C /* AppDelegate.swift */,
+				7194511F25E3D2C000C1D34C /* SceneDelegate.swift */,
+				7194512125E3D2C000C1D34C /* ViewController.swift */,
+				7194512325E3D2C000C1D34C /* Main.storyboard */,
+				7194513225E3D34E00C1D34C /* Quote.swift */,
+				7194513525E3D39200C1D34C /* Extensions.swift */,
+				7194513825E3D44F00C1D34C /* TTLayerAnimation.swift */,
+				7194512625E3D2C200C1D34C /* Assets.xcassets */,
+				7194512825E3D2C200C1D34C /* LaunchScreen.storyboard */,
+				7194512B25E3D2C200C1D34C /* Info.plist */,
+			);
+			path = SecretTextAnimation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7194511925E3D2C000C1D34C /* SecretTextAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7194512E25E3D2C200C1D34C /* Build configuration list for PBXNativeTarget "SecretTextAnimation" */;
+			buildPhases = (
+				7194511625E3D2C000C1D34C /* Sources */,
+				7194511725E3D2C000C1D34C /* Frameworks */,
+				7194511825E3D2C000C1D34C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecretTextAnimation;
+			productName = SecretTextAnimation;
+			productReference = 7194511A25E3D2C000C1D34C /* SecretTextAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7194511225E3D2BF00C1D34C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					7194511925E3D2C000C1D34C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 7194511525E3D2BF00C1D34C /* Build configuration list for PBXProject "SecretTextAnimation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7194511125E3D2BF00C1D34C;
+			productRefGroup = 7194511B25E3D2C000C1D34C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7194511925E3D2C000C1D34C /* SecretTextAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7194511825E3D2C000C1D34C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7194512A25E3D2C200C1D34C /* LaunchScreen.storyboard in Resources */,
+				7194512725E3D2C200C1D34C /* Assets.xcassets in Resources */,
+				7194512525E3D2C000C1D34C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7194511625E3D2C000C1D34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7194513625E3D39200C1D34C /* Extensions.swift in Sources */,
+				7194513325E3D34E00C1D34C /* Quote.swift in Sources */,
+				7194512225E3D2C000C1D34C /* ViewController.swift in Sources */,
+				7194513925E3D44F00C1D34C /* TTLayerAnimation.swift in Sources */,
+				7194511E25E3D2C000C1D34C /* AppDelegate.swift in Sources */,
+				7194512025E3D2C000C1D34C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7194512325E3D2C000C1D34C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7194512425E3D2C000C1D34C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7194512825E3D2C200C1D34C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7194512925E3D2C200C1D34C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7194512C25E3D2C200C1D34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7194512D25E3D2C200C1D34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7194512F25E3D2C200C1D34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SecretTextAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tTao.SecretTextAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7194513025E3D2C200C1D34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SecretTextAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tTao.SecretTextAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7194511525E3D2BF00C1D34C /* Build configuration list for PBXProject "SecretTextAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7194512C25E3D2C200C1D34C /* Debug */,
+				7194512D25E3D2C200C1D34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7194512E25E3D2C200C1D34C /* Build configuration list for PBXNativeTarget "SecretTextAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7194512F25E3D2C200C1D34C /* Debug */,
+				7194513025E3D2C200C1D34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7194511225E3D2BF00C1D34C /* Project object */;
+}
