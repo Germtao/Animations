@@ -13,6 +13,5 @@ extension CATextLayer {
         self.contentsScale = UIScreen.main.scale
         self.frame = frame
         self.string = string
-        
     }
 }

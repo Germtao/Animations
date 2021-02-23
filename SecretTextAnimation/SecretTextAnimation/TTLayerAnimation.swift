@@ -14,7 +14,7 @@ class TTLayerAnimation: NSObject {
     
     var layer: CALayer!
     
-    class func animation(_ layer: CALayer, duration: TimeInterval, delay: TimeInterval, animations: (() -> Void)?, completion: ((Bool) -> Void)?) {
+    class func animation(_ layer: CALayer, duration: TimeInterval, delay: TimeInterval, animations: (() -> Void)?, completion: ((Bool) -> Void)? = nil) {
         
         let anim = TTLayerAnimation()
         
@@ -31,8 +31,18 @@ class TTLayerAnimation: NSObject {
                 CATransaction.commit()
             }
             
-//            animGroup =
+            animGroup = self.groupAnimationsForDifferences(oldLayer, newLayer: layer)
             
+            guard let differenceAnim = animGroup else {
+                completion?(true)
+                return
+            }
+            
+            differenceAnim.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+            differenceAnim.duration = duration
+            differenceAnim.beginTime = CACurrentMediaTime()
+            
+            layer.add(differenceAnim, forKey: nil)
         }
     }
     
@@ -44,7 +54,43 @@ class TTLayerAnimation: NSObject {
             let anim = CABasicAnimation(keyPath: "transform")
             anim.fromValue = NSValue(caTransform3D: oldLayer.transform)
             anim.toValue = NSValue(caTransform3D: newLayer.transform)
+            anims.append(anim)
         }
+        
+        if !oldLayer.bounds.equalTo(newLayer.bounds) {
+            let anim = CABasicAnimation(keyPath: "bounds")
+            anim.fromValue = NSValue(cgRect: oldLayer.bounds)
+            anim.toValue = NSValue(cgRect: newLayer.bounds)
+            anims.append(anim)
+        }
+        
+        if !oldLayer.frame.equalTo(newLayer.frame) {
+            let anim = CABasicAnimation(keyPath: "frame")
+            anim.fromValue = NSValue(cgRect: oldLayer.frame)
+            anim.toValue = NSValue(cgRect: newLayer.frame)
+            anims.append(anim)
+        }
+        
+        if !oldLayer.position.equalTo(newLayer.position) {
+            let anim = CABasicAnimation(keyPath: "position")
+            anim.fromValue = NSValue(cgPoint: oldLayer.position)
+            anim.toValue = NSValue(cgPoint: newLayer.position)
+            anims.append(anim)
+        }
+        
+        if oldLayer.opacity != newLayer.opacity {
+            let anim = CABasicAnimation(keyPath: "opacity")
+            anim.fromValue = oldLayer.opacity
+            anim.toValue = newLayer.opacity
+            anims.append(anim)
+        }
+        
+        if anims.count > 0 {
+            animGroup = CAAnimationGroup()
+            animGroup?.animations = anims
+        }
+        
+        return animGroup
     }
     
     class func animatableLayerCopy(_ layer: CALayer) -> CALayer {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3F278725E4D31300DF759A /* CharacterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F278625E4D31300DF759A /* CharacterLabel.swift */; };
+		3B3F278A25E4DEEE00DF759A /* FadingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F278925E4DEEE00DF759A /* FadingLabel.swift */; };
 		7194511E25E3D2C000C1D34C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7194511D25E3D2C000C1D34C /* AppDelegate.swift */; };
 		7194512025E3D2C000C1D34C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7194511F25E3D2C000C1D34C /* SceneDelegate.swift */; };
 		7194512225E3D2C000C1D34C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7194512125E3D2C000C1D34C /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B3F278625E4D31300DF759A /* CharacterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLabel.swift; sourceTree = "<group>"; };
+		3B3F278925E4DEEE00DF759A /* FadingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingLabel.swift; sourceTree = "<group>"; };
 		7194511A25E3D2C000C1D34C /* SecretTextAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretTextAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7194511D25E3D2C000C1D34C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7194511F25E3D2C000C1D34C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				7194513225E3D34E00C1D34C /* Quote.swift */,
 				7194513525E3D39200C1D34C /* Extensions.swift */,
 				7194513825E3D44F00C1D34C /* TTLayerAnimation.swift */,
+				3B3F278625E4D31300DF759A /* CharacterLabel.swift */,
+				3B3F278925E4DEEE00DF759A /* FadingLabel.swift */,
 				7194512625E3D2C200C1D34C /* Assets.xcassets */,
 				7194512825E3D2C200C1D34C /* LaunchScreen.storyboard */,
 				7194512B25E3D2C200C1D34C /* Info.plist */,
@@ -151,7 +157,9 @@
 				7194512225E3D2C000C1D34C /* ViewController.swift in Sources */,
 				7194513925E3D44F00C1D34C /* TTLayerAnimation.swift in Sources */,
 				7194511E25E3D2C000C1D34C /* AppDelegate.swift in Sources */,
+				3B3F278A25E4DEEE00DF759A /* FadingLabel.swift in Sources */,
 				7194512025E3D2C000C1D34C /* SceneDelegate.swift in Sources */,
+				3B3F278725E4D31300DF759A /* CharacterLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
